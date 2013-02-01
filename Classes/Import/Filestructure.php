@@ -210,10 +210,12 @@ RewriteRule .* index.php [L]
 	 * @return void
 	 */
 	public function changeColor($color) {
-		foreach ($this->cssFiles as $cssFile) {
-			$cssContent = file_get_contents(PATH_site.$cssFile);
-			$cssContent = str_replace($this->defaultColor, $color, $cssContent);
-			file_put_contents(PATH_site.$cssFile, $cssContent);
+		if (file_exists($this->cssFiles)) {
+			foreach ($this->cssFiles as $cssFile) {
+				$cssContent = file_get_contents(PATH_site.$cssFile);
+				$cssContent = str_replace($this->defaultColor, $color, $cssContent);
+				file_put_contents(PATH_site.$cssFile, $cssContent);
+			}
 		}
 	}
 }
