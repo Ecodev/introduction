@@ -1,0 +1,6 @@
+The following extensions and versions are available:
+automaketemplate: 0.1.3
+jquerycolorbox: 0.0.1
+news: 1.4.0-dev (git://git.typo3.org/TYPO3v4/Extensions/news.git a15bb63d33cfa5886543acdcbe72983c6e19e2bc)
+realurl: 1.12.1
+wt_spamshield: 0.8.0
