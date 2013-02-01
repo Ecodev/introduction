@@ -211,7 +211,7 @@ RewriteRule .* index.php [L]
 	 */
 	public function changeColor($color) {
 		foreach ($this->cssFiles as $cssFile) {
-			if (file_exists($this->cssFiles)) {
+			if (file_exists($cssFiles)) {
 				$cssContent = file_get_contents(PATH_site.$cssFile);
 				$cssContent = str_replace($this->defaultColor, $color, $cssContent);
 				file_put_contents(PATH_site.$cssFile, $cssContent);
