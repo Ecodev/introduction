@@ -66,6 +66,17 @@ class tx_introduction_import_extension {
 		if (t3lib_extMgm::isLoaded($extensionKey)) {
 			return;
 		}
+
+		// Additional check added for the need of Bootstrap package since it may happen the extension folder already exists
+		// because of imported by Git / Composer / ... beforehand => don't import the t3x file.
+		$directoryPath = sprintf('%sext/%s',
+			PATH_typo3conf,
+			$extensionKey
+		);
+		if (is_dir($directoryPath)) {
+			return;
+		}
+
 		$fileContent = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl(
 			t3lib_extMgm::extPath('introduction', $this->sourceDirectory . '/' . $extensionKey . '.t3x')
 		);

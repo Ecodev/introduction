@@ -91,9 +91,20 @@ class tx_introduction_controller {
 	 * @return void
 	 */
 	public function executeStepOutput(&$markers, $step, &$callerObject) {
-		$this->configuration = t3lib_div::makeInstance('tx_introduction_configuration');
-		$this->databaseImporter = t3lib_div::makeInstance('tx_introduction_import_database');
-		$this->filestructureImporter = t3lib_div::makeInstance('tx_introduction_import_filestructure');
+
+		// So that PHPStorm can find the classes following code is needed...
+		/** @var $configuration tx_introduction_configuration */
+		$configuration = t3lib_div::makeInstance('tx_introduction_configuration');
+		$this->configuration = $configuration;
+
+		/** @var $databaseImporter tx_introduction_import_database */
+		$databaseImporter = t3lib_div::makeInstance('tx_introduction_import_database');
+		$this->databaseImporter = $databaseImporter;
+
+		/** @var $filestructureImporter tx_introduction_import_filestructure */
+		$filestructureImporter = t3lib_div::makeInstance('tx_introduction_import_filestructure');
+		$this->filestructureImporter = $filestructureImporter;
+
 		$this->installer = $callerObject;
 		$this->configuration->setInstallerObject($callerObject);
 		$message = '';
@@ -211,7 +222,7 @@ class tx_introduction_controller {
 			'typo3temp/',
 			'uploads/',
 		);
-		
+
 		$nonWritableDirectories = '';
 		foreach($directories as $directory) {
 			if (!$this->configuration->isDirectoryWritable($directory)) {
@@ -299,7 +310,7 @@ class tx_introduction_controller {
 	 */
 	public function finishAction(&$message) {
 		require_once(t3lib_extMgm::extPath('introduction', 'Classes/View/Finish.php'));
-		
+
 		$this->clearCache();
 
 		// Enable or disable realURL
@@ -375,7 +386,7 @@ class tx_introduction_controller {
 		}
 		return $subpackage;
 	}
-	
+
 	/**
 	 * Clears the TYPO3 cache by creating a BE session
 	 *
