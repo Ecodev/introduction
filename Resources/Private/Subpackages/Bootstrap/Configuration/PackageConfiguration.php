@@ -38,6 +38,6 @@ return array(
 
 	// Added by the Bootstrap package
 	'EXT/extConf/flux' => 'a:2:{s:9:"debugMode";s:1:"0";s:7:"compact";s:1:"0";}',
-	'EXT/extConf/realurl' => 'a:5:{s:10:"configFile";s:54:"typo3conf/ext/speciality/Configuration/Php/RealUrl.php";s:14:"enableAutoConf";s:1:"1";s:14:"autoConfFormat";s:1:"0";s:12:"enableDevLog";s:1:"0";s:19:"enableChashUrlDebug";s:1:"0";}',
+	'EXT/extConf/realurl' => 'a:5:{s:10:"configFile";s:21:"typo3conf/RealUrl.php";s:14:"enableAutoConf";s:1:"1";s:14:"autoConfFormat";s:1:"0";s:12:"enableDevLog";s:1:"0";s:19:"enableChashUrlDebug";s:1:"0";}',
 );
 ?>
