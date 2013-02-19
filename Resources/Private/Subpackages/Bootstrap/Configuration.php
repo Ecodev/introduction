@@ -33,7 +33,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'realurl',
 		'news',
 		'wt_spamshield',
-		'jquerycolorbox',
+		'jquerycolorbox', // @todo check whether installation can still work if removed
 	),
 	'extensionsToEnable' => array(
 		'extbase',
@@ -43,10 +43,6 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'fluidpages',
 		'fluidcontent',
 		'fluidcontent_bootstrap',
-		// @todo check what makes sense for an introduction package...
-		#'version',
-		#'workspaces',
-		#'scheduler',
 		'form',
 		'linkvalidator',
 		'realurl',
@@ -54,7 +50,8 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'felogin',
 		'indexed_search',
 		'wt_spamshield',
-		'jquerycolorbox',
+		'jquerycolorbox', // @todo check whether installation can still work if removed
+		'seo_basics',
 		'speciality',
 	),
 )
