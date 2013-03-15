@@ -33,7 +33,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'realurl',
 		'news',
 		'wt_spamshield',
-		'jquerycolorbox', // @todo check whether installation can still work if removed
+		'jquerycolorbox',
 	),
 	'extensionsToEnable' => array(
 		'extbase',
@@ -50,7 +50,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'felogin',
 		'indexed_search',
 		'wt_spamshield',
-		'jquerycolorbox', // @todo check whether installation can still work if removed
+		'jquerycolorbox',
 		'seo_basics',
 		'speciality',
 	),
