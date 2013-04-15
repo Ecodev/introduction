@@ -26,14 +26,19 @@
 ***************************************************************/
 $GLOBALS['subpackageConfiguration'] = array(
 	'extensionsToImport' => array(
+		'vhs',
 		'flux',
 		'fluidpages',
 		'fluidcontent',
 		'fluidcontent_bootstrap',
+		'speciality',
 		'realurl',
 		'news',
 		'wt_spamshield',
 		'jquerycolorbox',
+		'seo_basics',
+		'metadata',
+		'media',
 	),
 	'extensionsToEnable' => array(
 		'extbase',
@@ -43,6 +48,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'fluidpages',
 		'fluidcontent',
 		'fluidcontent_bootstrap',
+		'speciality',
 		'form',
 		'linkvalidator',
 		'realurl',
@@ -54,7 +60,6 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'seo_basics',
 		'metadata',
 		'media',
-		'speciality',
 	),
 )
 ?>
