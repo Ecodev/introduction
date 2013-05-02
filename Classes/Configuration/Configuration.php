@@ -107,13 +107,12 @@ class tx_introduction_configuration {
 			}
 		}
 
-		if ($this->InstallerObject->isGD()) {
-			$this->InstallerObject->INSTALL['LocalConfiguration']['TTFdpi'] = $this->determineDPI();
-			$gdInfo = gd_info();
-			if (intval($gdInfo['GD Version']) >= 2) {
-					// 2.0 or higher
-				\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Configuration\\ConfigurationManager')->setLocalConfigurationValueByPath('GFX/gdlib_2', 1);
-			}
+		$this->InstallerObject->INSTALL['LocalConfiguration']['TTFdpi'] = $this->determineDPI();
+
+		// GD 2.0 or higher
+		if (\TYPO3\CMS\Introduction\Utility\ImageCapability::isGD() &&
+			\TYPO3\CMS\Introduction\Utility\ImageCapability::getGDVersion() >= 2) {
+			\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Configuration\\ConfigurationManager')->setLocalConfigurationValueByPath('GFX/gdlib_2', 1);
 		}
 
 		// Replace the step in the action, as we would run into a loop.

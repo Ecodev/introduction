@@ -403,17 +403,6 @@ class tx_introduction_controller {
 		$simulatedBackendUser->start();
 		$simulatedBackendUser->setBeUserByName('admin');
 
-
-		// Added for the need of the Bootstrap package. Don't know for what reason PHP Warning on step 6
-		// Code below fix the issue.
-		if (is_null($GLOBALS['TCA'])) {
-			$GLOBALS['TCA'] = array(
-				'pages' => array(
-					'columns' => array(),
-				)
-			);
-		}
-
 		/** @var $tce t3lib_TCEmain */
 		$tce = t3lib_div::makeInstance('t3lib_TCEmain');
 		$tce->start('', '', $simulatedBackendUser);
