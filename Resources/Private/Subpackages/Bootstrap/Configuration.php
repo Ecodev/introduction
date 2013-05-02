@@ -60,6 +60,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'seo_basics',
 		'metadata',
 		'media',
+		'scheduler',
 	),
 )
 ?>
