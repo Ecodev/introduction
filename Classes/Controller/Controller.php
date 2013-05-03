@@ -166,7 +166,7 @@ class tx_introduction_controller {
 	 */
 	private function performUpdates($subpackageToInstall) {
 		// As we use some GD functions to deterime the negate mask we need to check if GD is available
-		if ($this->installer->isGD()) {
+		if (\TYPO3\CMS\Introduction\Utility\ImageCapability::isGD()) {
 			$this->configuration->modifyNegateMask();
 		}
 
