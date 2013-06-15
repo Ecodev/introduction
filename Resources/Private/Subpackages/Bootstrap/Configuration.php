@@ -39,6 +39,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'seo_basics',
 		'metadata',
 		'media',
+		'nc_staticfilecache',
 	),
 	'extensionsToEnable' => array(
 		'extbase',
@@ -61,6 +62,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'metadata',
 		'media',
 		'scheduler',
+		'nc_staticfilecache',
 	),
 )
 ?>
