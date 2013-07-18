@@ -40,6 +40,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'metadata',
 		'media',
 		'nc_staticfilecache',
+		'infinite_scroll_gallery',
 	),
 	'extensionsToEnable' => array(
 		'extbase',
@@ -63,6 +64,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'media',
 		'scheduler',
 		'nc_staticfilecache',
+		'infinite_scroll_gallery',
 	),
 )
 ?>
