@@ -45,6 +45,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 	'extensionsToEnable' => array(
 		'extbase',
 		'fluid',
+		'info',
 		'vhs',
 		'flux',
 		'fluidpages',
