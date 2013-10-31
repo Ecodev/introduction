@@ -61,6 +61,7 @@ $GLOBALS['subpackageConfiguration'] = array(
 		'wt_spamshield',
 		'jquerycolorbox',
 		'seo_basics',
+		'vidi',
 		'metadata',
 		'media',
 		'scheduler',
