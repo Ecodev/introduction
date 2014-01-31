@@ -5,5 +5,5 @@ Find the latest TYPO3 packages here
 	http://typo3.org/download/packages/
 
 This package is maintained at these resources
-	http://git.typo3.org/TYPO3v4/Distributions/Introduction.git
+	https://git.typo3.org/TYPO3CMS/Distributions/Introduction.git
 	http://forge.typo3.org/projects/extension-introduction
